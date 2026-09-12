@@ -1,0 +1,263 @@
+```html
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz — Pluggly</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <a href="index.html" class="logo">Pluggly</a>
+
+    <nav>
+        <a href="subjects.html">Ämnen</a>
+        <a href="quiz.html" class="active">Öva</a>
+        <a href="index.html#progress">Framsteg</a>
+    </nav>
+</header>
+
+<main>
+
+    <section class="quiz-page">
+        <div class="container">
+
+            <div class="quiz-header">
+                <p class="eyebrow">QUIZ</p>
+                <h1>Testa dina kunskaper.</h1>
+
+                <div class="quiz-progress">
+                    <span id="question-counter">Fråga 1 av 5</span>
+
+                    <div class="quiz-progress-bar">
+                        <div id="quiz-progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quiz-card">
+
+                <h2 id="question">
+                    Vad är 7 × 8?
+                </h2>
+
+                <div id="answers" class="answers">
+
+                    <button class="answer" data-answer="54">
+                        54
+                    </button>
+
+                    <button class="answer" data-answer="56">
+                        56
+                    </button>
+
+                    <button class="answer" data-answer="64">
+                        64
+                    </button>
+
+                    <button class="answer" data-answer="48">
+                        48
+                    </button>
+
+                </div>
+
+                <button
+                    id="next-question"
+                    class="btn btn-primary next-button"
+                    disabled
+                >
+                    Nästa
+                </button>
+
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+
+<script>
+
+const questions = [
+    {
+        question: "Vad är 7 × 8?",
+        answers: ["54", "56", "64", "48"],
+        correct: "56"
+    },
+    {
+        question: "Vad är 12²?",
+        answers: ["124", "144", "132", "154"],
+        correct: "144"
+    },
+    {
+        question: "Vilket tal är ett primtal?",
+        answers: ["21", "27", "29", "33"],
+        correct: "29"
+    },
+    {
+        question: "Vad är 100 ÷ 4?",
+        answers: ["20", "25", "30", "40"],
+        correct: "25"
+    },
+    {
+        question: "Vad är 15 + 27?",
+        answers: ["32", "40", "42", "45"],
+        correct: "42"
+    }
+];
+
+let currentQuestion = 0;
+let score = 0;
+let answered = false;
+
+const questionElement =
+    document.getElementById("question");
+
+const answersElement =
+    document.getElementById("answers");
+
+const nextButton =
+    document.getElementById("next-question");
+
+const counter =
+    document.getElementById("question-counter");
+
+const progressFill =
+    document.getElementById("quiz-progress-fill");
+
+function loadQuestion() {
+
+    answered = false;
+    nextButton.disabled = true;
+
+    const question = questions[currentQuestion];
+
+    questionElement.textContent =
+        question.question;
+
+    counter.textContent =
+        `Fråga ${currentQuestion + 1} av ${questions.length}`;
+
+    progressFill.style.width =
+        `${((currentQuestion + 1) / questions.length) * 100}%`;
+
+    answersElement.innerHTML = "";
+
+    question.answers.forEach(answer => {
+
+        const button =
+            document.createElement("button");
+
+        button.className = "answer";
+        button.textContent = answer;
+
+        button.addEventListener("click", () => {
+            selectAnswer(button, answer);
+        });
+
+        answersElement.appendChild(button);
+    });
+}
+
+function selectAnswer(button, answer) {
+
+    if (answered) return;
+
+    answered = true;
+
+    const correct =
+        questions[currentQuestion].correct;
+
+    const buttons =
+        document.querySelectorAll(".answer");
+
+    buttons.forEach(btn => {
+        btn.disabled = true;
+
+        if (btn.textContent === correct) {
+            btn.classList.add("correct");
+        }
+    });
+
+    if (answer === correct) {
+        score++;
+    } else {
+        button.classList.add("wrong");
+    }
+
+    nextButton.disabled = false;
+}
+
+nextButton.addEventListener("click", () => {
+
+    currentQuestion++;
+
+    if (currentQuestion >= questions.length) {
+        finishQuiz();
+        return;
+    }
+
+    loadQuestion();
+});
+
+function finishQuiz() {
+
+    const percentage =
+        Math.round(
+            (score / questions.length) * 100
+        );
+
+    localStorage.setItem(
+        "plugglyLastScore",
+        percentage
+    );
+
+    let progress =
+        Number(
+            localStorage.getItem("plugglyProgress") || 0
+        );
+
+    progress =
+        Math.min(100, progress + 5);
+
+    localStorage.setItem(
+        "plugglyProgress",
+        progress
+    );
+
+    document.querySelector(".quiz-card").innerHTML = `
+        <div class="quiz-result">
+            <p class="eyebrow">KLART</p>
+
+            <h2>${score} av ${questions.length}</h2>
+
+            <p>
+                Du fick ${percentage}% rätt.
+            </p>
+
+            <a href="subjects.html" class="btn btn-primary">
+                Fortsätt plugga
+            </a>
+
+            <button
+                onclick="location.reload()"
+                class="btn btn-secondary"
+            >
+                Gör igen
+            </button>
+        </div>
+    `;
+}
+
+loadQuestion();
+
+</script>
+
+</body>
+</html>
+```
