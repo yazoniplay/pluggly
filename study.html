@@ -1,0 +1,157 @@
+```html
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plugga — Pluggly</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <a href="index.html" class="logo">Pluggly</a>
+
+    <nav>
+        <a href="subjects.html">Ämnen</a>
+        <a href="quiz.html">Öva</a>
+        <a href="index.html#progress">Framsteg</a>
+    </nav>
+</header>
+
+<main>
+
+    <section class="page-hero">
+        <div class="container">
+            <p class="eyebrow" id="subject-label">ÄMNE</p>
+            <h1 id="subject-title">Matematik</h1>
+            <p id="subject-description">
+                Välj ett område och börja plugga.
+            </p>
+        </div>
+    </section>
+
+    <section class="study-section">
+        <div class="container">
+
+            <div class="study-actions">
+
+                <a href="quiz.html" class="btn btn-primary">
+                    Gör ett quiz
+                </a>
+
+                <a href="flashcards.html" class="btn btn-secondary">
+                    Flashcards
+                </a>
+
+            </div>
+
+            <div class="section-header">
+                <div>
+                    <p class="eyebrow">OMRÅDEN</p>
+                    <h2>Vad vill du lära dig?</h2>
+                </div>
+            </div>
+
+            <div class="lesson-list">
+
+                <a href="#" class="lesson-card">
+                    <div>
+                        <span class="lesson-number">01</span>
+                        <h3>Grunderna</h3>
+                        <p>Bygg en stabil grund innan du går vidare.</p>
+                    </div>
+                    <span>→</span>
+                </a>
+
+                <a href="#" class="lesson-card">
+                    <div>
+                        <span class="lesson-number">02</span>
+                        <h3>Övning</h3>
+                        <p>Träna på det du precis har lärt dig.</p>
+                    </div>
+                    <span>→</span>
+                </a>
+
+                <a href="#" class="lesson-card">
+                    <div>
+                        <span class="lesson-number">03</span>
+                        <h3>Fördjupning</h3>
+                        <p>Ta nästa steg och utmana dig själv.</p>
+                    </div>
+                    <span>→</span>
+                </a>
+
+                <a href="#" class="lesson-card">
+                    <div>
+                        <span class="lesson-number">04</span>
+                        <h3>Testa dig själv</h3>
+                        <p>Se hur mycket du faktiskt kan.</p>
+                    </div>
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <p>© 2026 Pluggly</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const subject = params.get("subject");
+
+    const subjects = {
+        matematik: {
+            title: "Matematik",
+            description: "Tal, algebra, geometri och problemlösning."
+        },
+        svenska: {
+            title: "Svenska",
+            description: "Språk, grammatik, läsning och skrivande."
+        },
+        engelska: {
+            title: "Engelska",
+            description: "Vocabulary, grammar, reading och writing."
+        },
+        no: {
+            title: "NO",
+            description: "Biologi, fysik och kemi."
+        },
+        so: {
+            title: "SO",
+            description: "Historia, geografi, religion och samhälle."
+        },
+        programmering: {
+            title: "Programmering",
+            description: "Kod, webbutveckling och programmeringslogik."
+        }
+    };
+
+    if (subject && subjects[subject]) {
+        document.title = `${subjects[subject].title} — Pluggly`;
+
+        document.getElementById("subject-title").textContent =
+            subjects[subject].title;
+
+        document.getElementById("subject-description").textContent =
+            subjects[subject].description;
+
+        document.getElementById("subject-label").textContent =
+            "ÄMNE";
+    }
+</script>
+
+</body>
+</html>
+```
