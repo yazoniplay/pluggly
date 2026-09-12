@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Pluggly — Plugga smartare</title>
+
+  <meta
+    name="description"
+    content="Pluggly är en studieplattform där du kan lära dig, träna, göra quiz och följa dina framsteg."
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- =========================
+       NAVIGATION
+  ========================== -->
+
+  <header class="navbar">
+
+    <a href="index.html" class="logo">
+      Pluggly<span>.</span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="#subjects">Ämnen</a>
+      <a href="#practice">Öva</a>
+      <a href="#progress">Framsteg</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="nav-login">Logga in</button>
+      <button class="nav-start">Börja plugga</button>
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero">
+
+      <div class="hero-content">
+
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Din studieplattform
+        </div>
+
+        <h1>
+          Plugga mindre.
+          <span>Lär dig mer.</span>
+        </h1>
+
+        <p class="hero-description">
+          Lär dig nya saker, träna inför prov och se vad du faktiskt
+          kan. Allt samlat på ett ställe.
+        </p>
+
+        <div class="hero-actions">
+
+          <button class="primary-button">
+            Börja plugga
+            <span>→</span>
+          </button>
+
+          <button class="secondary-button">
+            Utforska ämnen
+          </button>
+
+        </div>
+
+        <div class="hero-note">
+          ✓ Gratis att börja
+          <span>•</span>
+          ✓ Ingen komplicerad setup
+        </div>
+
+      </div>
+
+
+      <!-- PRODUCT PREVIEW -->
+
+      <div class="hero-preview">
+
+        <div class="preview-window">
+
+          <div class="preview-topbar">
+
+            <div class="window-dots">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+            <div class="preview-title">
+              Pluggly
+            </div>
+
+          </div>
+
+
+          <div class="preview-body">
+
+            <aside class="preview-sidebar">
+
+              <div class="sidebar-logo">
+                P<span>.</span>
+              </div>
+
+              <div class="sidebar-item active">
+                <span>⌂</span>
+              </div>
+
+              <div class="sidebar-item">
+                <span>▦</span>
+              </div>
+
+              <div class="sidebar-item">
+                <span>✓</span>
+              </div>
+
+              <div class="sidebar-item">
+                <span>◷</span>
+              </div>
+
+            </aside>
+
+
+            <div class="preview-content">
+
+              <div class="preview-greeting">
+                <span>Hej 👋</span>
+                <strong>Redo att plugga?</strong>
+              </div>
+
+
+              <div class="preview-progress-card">
+
+                <div>
+                  <small>DIN VECKA</small>
+                  <h3>Fortsätt där du slutade</h3>
+                </div>
+
+                <div class="mini-progress">
+                  <strong>68%</strong>
+                  <div>
+                    <span></span>
+                  </div>
+                </div>
+
+              </div>
+
+
+              <div class="preview-section-title">
+                Fortsätt plugga
+              </div>
+
+
+              <div class="mini-subjects">
+
+                <div class="mini-card">
+                  <div class="mini-icon math-icon">∑</div>
+                  <div>
+                    <strong>Matematik</strong>
+                    <small>Algebra</small>
+                  </div>
+                  <span>→</span>
+                </div>
+
+                <div class="mini-card">
+                  <div class="mini-icon swedish-icon">A</div>
+                  <div>
+                    <strong>Svenska</strong>
+                    <small>Grammatik</small>
+                  </div>
+                  <span>→</span>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         QUICK START
+    ========================== -->
+
+    <section class="quick-start">
+
+      <div class="quick-card">
+        <div class="quick-icon">🧠</div>
+
+        <div>
+          <strong>Gör ett quiz</strong>
+          <span>Testa vad du kan</span>
+        </div>
+
+        <span class="quick-arrow">→</span>
+      </div>
+
+
+      <div class="quick-card">
+        <div class="quick-icon">🃏</div>
+
+        <div>
+          <strong>Träna flashcards</strong>
+          <span>Repetera viktiga saker</span>
+        </div>
+
+        <span class="quick-arrow">→</span>
+      </div>
+
+
+      <div class="quick-card">
+        <div class="quick-icon">🎯</div>
+
+        <div>
+          <strong>Träna svagheter</strong>
+          <span>Fokusera på det du missar</span>
+        </div>
+
+        <span class="quick-arrow">→</span>
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         SUBJECTS
+    ========================== -->
+
+    <section class="section" id="subjects">
+
+      <div class="section-heading">
+
+        <div>
+          <span class="section-label">ÄMNEN</span>
+
+          <h2>
+            Vad vill du lära dig?
+          </h2>
+        </div>
+
+        <a href="#" class="section-link">
+          Visa alla →
+        </a>
+
+      </div>
+
+
+      <div class="subjects-grid">
+
+        <a href="#" class="subject-card">
+
+          <div class="subject-top">
+            <div class="subject-icon math">∑</div>
+            <span>→</span>
+          </div>
+
+          <h3>Matematik</h3>
+
+          <p>
+            Algebra, geometri, procent och mer.
+          </p>
+
+          <div class="subject-meta">
+            <span>12 områden</span>
+          </div>
+
+        </a>
+
+
+        <a href="#" class="subject-card">
+
+          <div class="subject-top">
+            <div class="subject-icon swedish">A</div>
+            <span>→</span>
+          </div>
+
+          <h3>Svenska</h3>
+
+          <p>
+            Grammatik, läsning och skrivande.
+          </p>
+
+          <div class="subject-meta">
+            <span>10 områden</span>
+          </div>
+
+        </a>
+
+
+        <a href="#" class="subject-card">
+
+          <div class="subject-top">
+            <div class="subject-icon english">EN</div>
+            <span>→</span>
+          </div>
+
+          <h3>Engelska</h3>
+
+          <p>
+            Grammar, vocabulary och reading.
+          </p>
+
+          <div class="subject-meta">
+            <span>11 områden</span>
+          </div>
+
+        </a>
+
+
+        <a href="#" class="subject-card">
+
+          <div class="subject-top">
+            <div class="subject-icon science">⚗</div>
+            <span>→</span>
+          </div>
+
+          <h3>NO</h3>
+
+          <p>
+            Biologi, fysik och kemi.
+          </p>
+
+          <div class="subject-meta">
+            <span>18 områden</span>
+          </div>
+
+        </a>
+
+
+        <a href="#" class="subject-card">
+
+          <div class="subject-top">
+            <div class="subject-icon social">◎</div>
+            <span>→</span>
+          </div>
+
+          <h3>SO</h3>
+
+          <p>
+            Historia, geografi, religion och samhälle.
+          </p>
+
+          <div class="subject-meta">
+            <span>20 områden</span>
+          </div>
+
+        </a>
+
+
+        <a href="#" class="subject-card">
+
+          <div class="subject-top">
+            <div class="subject-icon coding">&lt;/&gt;</div>
+            <span>→</span>
+          </div>
+
+          <h3>Programmering</h3>
+
+          <p>
+            Lär dig koda från grunden.
+          </p>
+
+          <div class="subject-meta">
+            <span>8 områden</span>
+          </div>
+
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         PRACTICE
+    ========================== -->
+
+    <section class="section practice-section" id="practice">
+
+      <div class="practice-layout">
+
+        <div class="practice-copy">
+
+          <span class="section-label">
+            SMARTARE PLUGG
+          </span>
+
+          <h2>
+            Sluta läsa om saker
+            du redan kan.
+          </h2>
+
+          <p>
+            Pluggly hjälper dig att hitta det du behöver träna på.
+            När du gör quiz lär du dig vad du kan — och vad du behöver
+            repetera.
+          </p>
+
+          <button class="primary-button">
+            Testa ett quiz
+            <span>→</span>
+          </button>
+
+        </div>
+
+
+        <div class="practice-visual">
+
+          <div class="practice-header">
+            <span>Din träning</span>
+            <span class="practice-score">72%</span>
+          </div>
+
+
+          <div class="skill-row">
+
+            <div class="skill-info">
+              <span>Algebra</span>
+              <strong>92%</strong>
+            </div>
+
+            <div class="skill-bar">
+              <span style="width: 92%;"></span>
+            </div>
+
+          </div>
+
+
+          <div class="skill-row">
+
+            <div class="skill-info">
+              <span>Geometri</span>
+              <strong>74%</strong>
+            </div>
+
+            <div class="skill-bar">
+              <span style="width: 74%;"></span>
+            </div>
+
+          </div>
+
+
+          <div class="skill-row">
+
+            <div class="skill-info">
+              <span>Ekvationer</span>
+              <strong>48%</strong>
+            </div>
+
+            <div class="skill-bar">
+              <span style="width: 48%;"></span>
+            </div>
+
+          </div>
+
+
+          <div class="weak-topic">
+
+            <div class="weak-icon">
+              !
+            </div>
+
+            <div>
+              <strong>Träna mer på ekvationer</strong>
+              <span>Du kan förbättra ditt resultat.</span>
+            </div>
+
+            <button>
+              Träna →
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         STUDY MODES
+    ========================== -->
+
+    <section class="section">
+
+      <div class="section-heading centered">
+
+        <span class="section-label">
+          STUDIELÄGEN
+        </span>
+
+        <h2>
+          Plugga på ditt sätt.
+        </h2>
+
+        <p>
+          Olika sätt att lära sig fungerar för olika personer.
+        </p>
+
+      </div>
+
+
+      <div class="study-modes">
+
+        <div class="mode-card">
+
+          <div class="mode-number">
+            01
+          </div>
+
+          <div class="mode-icon">
+            📖
+          </div>
+
+          <h3>
+            Lär dig
+          </h3>
+
+          <p>
+            Korta och tydliga lektioner som förklarar ämnet.
+          </p>
+
+        </div>
+
+
+        <div class="mode-card">
+
+          <div class="mode-number">
+            02
+          </div>
+
+          <div class="mode-icon">
+            🃏
+          </div>
+
+          <h3>
+            Flashcards
+          </h3>
+
+          <p>
+            Repetera viktiga begrepp och fakta.
+          </p>
+
+        </div>
+
+
+        <div class="mode-card">
+
+          <div class="mode-number">
+            03
+          </div>
+
+          <div class="mode-icon">
+            🧠
+          </div>
+
+          <h3>
+            Quiz
+          </h3>
+
+          <p>
+            Testa dina kunskaper och få direkt feedback.
+          </p>
+
+        </div>
+
+
+        <div class="mode-card">
+
+          <div class="mode-number">
+            04
+          </div>
+
+          <div class="mode-icon">
+            📝
+          </div>
+
+          <h3>
+            Test
+          </h3>
+
+          <p>
+            Simulera ett riktigt prov utan hjälp.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROGRESS
+    ========================== -->
+
+    <section class="section progress-section" id="progress">
+
+      <div class="progress-layout">
+
+        <div>
+
+          <span class="section-label">
+            DINA FRAMSTEG
+          </span>
+
+          <h2>
+            Se att du faktiskt
+            blir bättre.
+          </h2>
+
+          <p>
+            Följ dina resultat över tid och upptäck vilka områden
+            du behärskar och vilka du behöver träna mer på.
+          </p>
+
+          <button class="secondary-button">
+            Se exempel →
+          </button>
+
+        </div>
+
+
+        <div class="progress-dashboard">
+
+          <div class="dashboard-header">
+
+            <div>
+              <small>DEN HÄR VECKAN</small>
+              <strong>84%</strong>
+            </div>
+
+            <span class="positive">
+              +12%
+            </span>
+
+          </div>
+
+
+          <div class="chart">
+
+            <div class="chart-line line-one"></div>
+            <div class="chart-line line-two"></div>
+            <div class="chart-line line-three"></div>
+
+            <div class="chart-points">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+          </div>
+
+
+          <div class="chart-days">
+            <span>Mån</span>
+            <span>Tis</span>
+            <span>Ons</span>
+            <span>Tor</span>
+            <span>Fre</span>
+            <span>Lör</span>
+            <span>Sön</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         FINAL CTA
+    ========================== -->
+
+    <section class="final-cta">
+
+      <div class="cta-content">
+
+        <span class="section-label">
+          PLUGGA SMARTARE
+        </span>
+
+        <h2>
+          Ditt nästa prov
+          börjar här.
+        </h2>
+
+        <p>
+          Välj ett ämne och börja träna.
+        </p>
+
+        <button class="primary-button">
+          Börja plugga
+          <span>→</span>
+        </button>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <div class="footer-main">
+
+      <div class="footer-brand">
+
+        <a href="index.html" class="logo">
+          Pluggly<span>.</span>
+        </a>
+
+        <p>
+          En enklare plats för att lära sig,
+          träna och bli bättre.
+        </p>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h4>Plattform</h4>
+
+        <a href="#subjects">Ämnen</a>
+        <a href="#practice">Öva</a>
+        <a href="#progress">Framsteg</a>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h4>Ämnen</h4>
+
+        <a href="#">Matematik</a>
+        <a href="#">Svenska</a>
+        <a href="#">Engelska</a>
+        <a href="#">NO</a>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h4>Mer</h4>
+
+        <a href="#">Om Pluggly</a>
+        <a href="#">Kontakt</a>
+        <a href="#">Integritet</a>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <span>
+        © 2026 Pluggly
+      </span>
+
+      <span>
+        Byggt för elever.
+      </span>
+
+    </div>
+
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
