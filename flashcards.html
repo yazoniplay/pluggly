@@ -1,0 +1,185 @@
+```html
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcards — Pluggly</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <a href="index.html" class="logo">Pluggly</a>
+
+    <nav>
+        <a href="subjects.html">Ämnen</a>
+        <a href="quiz.html">Öva</a>
+        <a href="index.html#progress">Framsteg</a>
+    </nav>
+</header>
+
+<main>
+
+    <section class="flashcards-page">
+
+        <div class="container">
+
+            <div class="flashcards-header">
+                <p class="eyebrow">FLASHCARDS</p>
+                <h1>Lär dig genom repetition.</h1>
+                <p>
+                    Klicka på kortet för att se svaret.
+                </p>
+            </div>
+
+            <div class="flashcard-wrapper">
+
+                <button
+                    id="flashcard"
+                    class="flashcard"
+                >
+
+                    <div class="flashcard-inner">
+
+                        <div class="flashcard-front">
+                            <span>FRÅGA</span>
+                            <h2 id="card-question">
+                                Vad är fotosyntes?
+                            </h2>
+                        </div>
+
+                        <div class="flashcard-back">
+                            <span>SVAR</span>
+                            <h2 id="card-answer">
+                                Processen där växter omvandlar
+                                ljusenergi till kemisk energi.
+                            </h2>
+                        </div>
+
+                    </div>
+
+                </button>
+
+            </div>
+
+            <div class="flashcard-controls">
+
+                <button
+                    id="wrong-card"
+                    class="btn btn-secondary"
+                >
+                    Behöver träna
+                </button>
+
+                <span id="card-counter">
+                    1 / 5
+                </span>
+
+                <button
+                    id="right-card"
+                    class="btn btn-primary"
+                >
+                    Jag kan detta
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+
+<script>
+
+const cards = [
+    {
+        question: "Vad är fotosyntes?",
+        answer: "Processen där växter omvandlar ljusenergi till kemisk energi."
+    },
+    {
+        question: "Vad är en atom?",
+        answer: "Den minsta enheten av ett grundämne som behåller ämnets egenskaper."
+    },
+    {
+        question: "Vad är gravitation?",
+        answer: "En kraft som drar objekt med massa mot varandra."
+    },
+    {
+        question: "Vad är en cell?",
+        answer: "Den minsta grundläggande enheten som bygger upp levande organismer."
+    },
+    {
+        question: "Vad är DNA?",
+        answer: "Molekylen som innehåller genetisk information."
+    }
+];
+
+let currentCard = 0;
+
+const flashcard =
+    document.getElementById("flashcard");
+
+const question =
+    document.getElementById("card-question");
+
+const answer =
+    document.getElementById("card-answer");
+
+const counter =
+    document.getElementById("card-counter");
+
+function loadCard() {
+
+    flashcard.classList.remove("flipped");
+
+    question.textContent =
+        cards[currentCard].question;
+
+    answer.textContent =
+        cards[currentCard].answer;
+
+    counter.textContent =
+        `${currentCard + 1} / ${cards.length}`;
+}
+
+flashcard.addEventListener("click", () => {
+    flashcard.classList.toggle("flipped");
+});
+
+document
+    .getElementById("right-card")
+    .addEventListener("click", () => {
+
+        nextCard();
+    });
+
+document
+    .getElementById("wrong-card")
+    .addEventListener("click", () => {
+
+        nextCard();
+    });
+
+function nextCard() {
+
+    currentCard++;
+
+    if (currentCard >= cards.length) {
+        currentCard = 0;
+    }
+
+    loadCard();
+}
+
+loadCard();
+
+</script>
+
+</body>
+</html>
+```
