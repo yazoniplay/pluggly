@@ -1,716 +1,902 @@
-```html
 <!DOCTYPE html>
+
 <html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Plugga — Pluggly</title>
+```
+<title>Plugga — Pluggly</title>
 
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
+```
+
 </head>
 
 <body>
 
 <header class="navbar">
 
-    <a href="index.html" class="logo">
-        Pluggly
-    </a>
+```
+<a href="index.html" class="logo">
+    Pluggly
+</a>
 
-    <nav>
-        <a href="subjects.html">Ämnen</a>
-        <a href="quiz.html">Öva</a>
-        <a href="index.html#progress">Framsteg</a>
-    </nav>
+<nav>
+    <a href="subjects.html">Ämnen</a>
+    <a href="quiz.html">Öva</a>
+    <a href="index.html#progress">Framsteg</a>
+</nav>
 
-    <a href="subjects.html" class="btn btn-secondary">
-        Byt ämne
-    </a>
+<a href="subjects.html" class="btn btn-secondary">
+    Byt ämne
+</a>
+```
 
 </header>
 
-
 <main>
 
-    <!-- =========================================
-         SUBJECT HERO
-         ========================================= -->
+```
+<!-- =========================================
+     SUBJECT HERO
+     ========================================= -->
 
-    <section class="page-hero">
+<section class="page-hero">
 
-        <div class="container">
+    <div class="container">
 
-            <p class="eyebrow" id="subject-label">
-                ÄMNE
-            </p>
+        <p class="eyebrow" id="subject-label">
+            ÄMNE
+        </p>
 
-            <h1 id="subject-title">
-                Matematik
-            </h1>
+        <h1 id="subject-title">
+            Matematik
+        </h1>
 
-            <p id="subject-description">
-                Tal, algebra, geometri och problemlösning.
-            </p>
+        <p id="subject-description">
+            Tal, algebra, geometri och problemlösning.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     OVERVIEW
+     ========================================= -->
+
+<section class="study-overview">
+
+    <div class="container">
+
+        <div class="study-overview-grid">
+
+            <div class="overview-main">
+
+                <p class="eyebrow">
+                    DIN STUDIEVÄG
+                </p>
+
+                <h2>
+                    Fortsätt där du slutade.
+                </h2>
+
+                <p>
+                    Lär dig grunderna, öva på det du kan
+                    och testa dina kunskaper längs vägen.
+                </p>
+
+            </div>
+
+
+            <div class="overview-progress">
+
+                <div class="progress-top">
+
+                    <span>
+                        Framsteg
+                    </span>
+
+                    <strong id="overall-progress">
+                        0%
+                    </strong>
+
+                </div>
+
+                <div class="progress-bar">
+
+                    <div
+                        class="progress-fill"
+                        id="overall-progress-fill"
+                        style="width: 0%"
+                    ></div>
+
+                </div>
+
+                <span class="progress-note">
+                    Börja din första lektion
+                </span>
+
+            </div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- =========================================
-         OVERVIEW
-         ========================================= -->
+<!-- =========================================
+     QUICK ACTIONS
+     ========================================= -->
 
-    <section class="study-overview">
+<section class="study-tools">
 
-        <div class="container">
+    <div class="container">
 
-            <div class="study-overview-grid">
+        <div class="section-header">
 
-                <div class="overview-main">
+            <div>
 
-                    <p class="eyebrow">
-                        DIN STUDIEVÄG
-                    </p>
+                <p class="eyebrow">
+                    ÖVA
+                </p>
 
-                    <h2>
-                        Fortsätt där du slutade.
-                    </h2>
+                <h2>
+                    Välj hur du vill plugga.
+                </h2>
 
-                    <p>
-                        Lär dig grunderna, öva på det du kan
-                        och testa dina kunskaper längs vägen.
-                    </p>
+            </div>
+
+        </div>
+
+
+        <div class="study-tools-grid">
+
+            <a
+                href="quiz.html"
+                class="study-tool"
+                id="quiz-link"
+            >
+
+                <span class="tool-label">
+                    TESTA DIG
+                </span>
+
+                <h3>
+                    Quiz
+                </h3>
+
+                <p>
+                    Svara på frågor och se hur
+                    mycket du kan.
+                </p>
+
+                <span class="tool-arrow">
+                    →
+                </span>
+
+            </a>
+
+
+            <a
+                href="flashcards.html"
+                class="study-tool"
+                id="flashcards-link"
+            >
+
+                <span class="tool-label">
+                    REPETERA
+                </span>
+
+                <h3>
+                    Flashcards
+                </h3>
+
+                <p>
+                    Repetera viktiga begrepp
+                    och fakta.
+                </p>
+
+                <span class="tool-arrow">
+                    →
+                </span>
+
+            </a>
+
+
+            <a
+                href="quiz.html"
+                class="study-tool"
+                id="test-link"
+            >
+
+                <span class="tool-label">
+                    UTMANA DIG
+                </span>
+
+                <h3>
+                    Test
+                </h3>
+
+                <p>
+                    Gör ett längre test när
+                    du känner dig redo.
+                </p>
+
+                <span class="tool-arrow">
+                    →
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     CHAPTERS
+     ========================================= -->
+
+<section class="chapters-section" id="chapters">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div>
+
+                <p class="eyebrow">
+                    KURS
+                </p>
+
+                <h2>
+                    Kapitel
+                </h2>
+
+            </div>
+
+            <span
+                class="chapter-count"
+                id="chapter-count"
+            >
+                6 kapitel
+            </span>
+
+        </div>
+
+
+        <!-- Chapters are generated automatically -->
+        <div
+            class="chapter-list"
+            id="chapter-list"
+        ></div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     BOTTOM CTA
+     ========================================= -->
+
+<section class="study-bottom">
+
+    <div class="container">
+
+        <div class="study-bottom-inner">
+
+            <div>
+
+                <p class="eyebrow">
+                    REDO?
+                </p>
+
+                <h2>
+                    Börja med första lektionen.
+                </h2>
+
+                <p>
+                    Du behöver inte kunna något
+                    innan du börjar.
+                </p>
+
+            </div>
+
+            <a
+                href="#chapters"
+                class="btn btn-primary"
+                id="start-first-lesson"
+            >
+                Börja plugga
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+```
+
+</main>
+
+<footer class="footer">
+
+```
+<div class="container">
+
+    <p>
+        © 2026 Pluggly
+    </p>
+
+</div>
+```
+
+</footer>
+
+<script src="script.js"></script>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    /* =========================================
+       GET SUBJECT FROM URL
+       ========================================= */
+
+    const params = new URLSearchParams(
+        window.location.search
+    );
+
+    const subjectKey =
+        params.get("subject") || "matematik";
+
+
+    /* =========================================
+       SUBJECT DATA
+       ========================================= */
+
+    const subjects = {
+
+        matematik: {
+
+            name: "Matematik",
+
+            description:
+                "Tal, algebra, geometri och problemlösning.",
+
+            chapters: [
+
+                {
+                    title: "Tal och räkning",
+                    description:
+                        "Lär dig grunderna i tal, räknesätt och prioriteringsregler.",
+                    lessons: 4,
+                    firstLesson: "De fyra räknesätten"
+                },
+
+                {
+                    title: "Bråk och procent",
+                    description:
+                        "Förstå bråk, decimaler, procent och förändringar.",
+                    lessons: 4,
+                    firstLesson: "Vad är ett bråk?"
+                },
+
+                {
+                    title: "Algebra",
+                    description:
+                        "Lär dig variabler, uttryck och ekvationer.",
+                    lessons: 5,
+                    firstLesson: "Vad är en variabel?"
+                },
+
+                {
+                    title: "Geometri",
+                    description:
+                        "Träna på former, vinklar, area, omkrets och volym.",
+                    lessons: 5,
+                    firstLesson: "Vinklar och former"
+                },
+
+                {
+                    title: "Statistik",
+                    description:
+                        "Lär dig om diagram, medelvärde, median och data.",
+                    lessons: 4,
+                    firstLesson: "Att läsa diagram"
+                },
+
+                {
+                    title: "Problemlösning",
+                    description:
+                        "Använd dina kunskaper för att lösa verkliga problem.",
+                    lessons: 5,
+                    firstLesson: "Strategier för problemlösning"
+                }
+
+            ]
+
+        },
+
+
+        svenska: {
+
+            name: "Svenska",
+
+            description:
+                "Grammatik, läsförståelse, skrivande och litteratur.",
+
+            chapters: [
+
+                {
+                    title: "Grammatik",
+                    description:
+                        "Lär dig hur svenska meningar och texter är uppbyggda.",
+                    lessons: 5,
+                    firstLesson: "Vad är grammatik?"
+                },
+
+                {
+                    title: "Ordklasser",
+                    description:
+                        "Träna på substantiv, verb, adjektiv och andra ordklasser.",
+                    lessons: 6,
+                    firstLesson: "Substantiv"
+                },
+
+                {
+                    title: "Läsförståelse",
+                    description:
+                        "Lär dig hitta information, tolka och analysera texter.",
+                    lessons: 5,
+                    firstLesson: "Hitta information i en text"
+                },
+
+                {
+                    title: "Skrivande",
+                    description:
+                        "Lär dig skriva tydliga, strukturerade och bra texter.",
+                    lessons: 5,
+                    firstLesson: "Att bygga en text"
+                },
+
+                {
+                    title: "Retorik",
+                    description:
+                        "Lär dig argumentera, övertyga och presentera dina idéer.",
+                    lessons: 4,
+                    firstLesson: "Vad är retorik?"
+                },
+
+                {
+                    title: "Litteratur",
+                    description:
+                        "Utforska berättelser, genrer, författare och texter.",
+                    lessons: 5,
+                    firstLesson: "Olika typer av berättelser"
+                }
+
+            ]
+
+        },
+
+
+        engelska: {
+
+            name: "Engelska",
+
+            description:
+                "Vocabulary, grammar, reading, writing och speaking.",
+
+            chapters: [
+
+                {
+                    title: "Vocabulary",
+                    description:
+                        "Bygg upp ett större engelskt ordförråd.",
+                    lessons: 6,
+                    firstLesson: "Everyday words"
+                },
+
+                {
+                    title: "Grammar",
+                    description:
+                        "Lär dig viktiga grammatiska regler och strukturer.",
+                    lessons: 6,
+                    firstLesson: "Building a sentence"
+                },
+
+                {
+                    title: "Tenses",
+                    description:
+                        "Lär dig använda olika tempus på rätt sätt.",
+                    lessons: 5,
+                    firstLesson: "Present tense"
+                },
+
+                {
+                    title: "Reading",
+                    description:
+                        "Förbättra din läsförståelse och förstå engelska texter.",
+                    lessons: 5,
+                    firstLesson: "Finding information"
+                },
+
+                {
+                    title: "Writing",
+                    description:
+                        "Lär dig skriva tydliga och välstrukturerade texter.",
+                    lessons: 5,
+                    firstLesson: "Writing a paragraph"
+                },
+
+                {
+                    title: "Speaking",
+                    description:
+                        "Träna på att uttrycka dig tydligt på engelska.",
+                    lessons: 4,
+                    firstLesson: "Introducing yourself"
+                }
+
+            ]
+
+        },
+
+
+        no: {
+
+            name: "NO",
+
+            description:
+                "Biologi, fysik, kemi, energi och människokroppen.",
+
+            chapters: [
+
+                {
+                    title: "Biologi",
+                    description:
+                        "Lär dig om livet, celler, organismer och naturen.",
+                    lessons: 5,
+                    firstLesson: "Vad är en cell?"
+                },
+
+                {
+                    title: "Människokroppen",
+                    description:
+                        "Utforska kroppens organ och hur kroppen fungerar.",
+                    lessons: 5,
+                    firstLesson: "Kroppens organsystem"
+                },
+
+                {
+                    title: "Fysik",
+                    description:
+                        "Lär dig om krafter, rörelse, energi och elektricitet.",
+                    lessons: 6,
+                    firstLesson: "Vad är en kraft?"
+                },
+
+                {
+                    title: "Kemi",
+                    description:
+                        "Förstå atomer, molekyler, ämnen och kemiska reaktioner.",
+                    lessons: 6,
+                    firstLesson: "Vad är en atom?"
+                },
+
+                {
+                    title: "Energi",
+                    description:
+                        "Lär dig om olika energiformer och energiomvandlingar.",
+                    lessons: 4,
+                    firstLesson: "Vad är energi?"
+                },
+
+                {
+                    title: "Materia",
+                    description:
+                        "Utforska materia och hur olika ämnen är uppbyggda.",
+                    lessons: 4,
+                    firstLesson: "Materiens olika former"
+                }
+
+            ]
+
+        },
+
+
+        so: {
+
+            name: "SO",
+
+            description:
+                "Samhällskunskap, historia, geografi, religion och ekonomi.",
+
+            chapters: [
+
+                {
+                    title: "Samhällskunskap",
+                    description:
+                        "Förstå hur samhället fungerar och organiseras.",
+                    lessons: 5,
+                    firstLesson: "Vad är ett samhälle?"
+                },
+
+                {
+                    title: "Historia",
+                    description:
+                        "Utforska viktiga händelser, personer och tidsperioder.",
+                    lessons: 6,
+                    firstLesson: "Att förstå historia"
+                },
+
+                {
+                    title: "Geografi",
+                    description:
+                        "Lär dig om länder, klimat, natur och människor.",
+                    lessons: 5,
+                    firstLesson: "Jorden och dess kontinenter"
+                },
+
+                {
+                    title: "Religion",
+                    description:
+                        "Utforska religioner, livsåskådningar och etik.",
+                    lessons: 5,
+                    firstLesson: "Vad är religion?"
+                },
+
+                {
+                    title: "Demokrati",
+                    description:
+                        "Förstå demokrati, rättigheter och hur beslut fattas.",
+                    lessons: 4,
+                    firstLesson: "Vad är demokrati?"
+                },
+
+                {
+                    title: "Ekonomi",
+                    description:
+                        "Lär dig grunderna i privatekonomi och samhällsekonomi.",
+                    lessons: 5,
+                    firstLesson: "Vad är ekonomi?"
+                }
+
+            ]
+
+        },
+
+
+        programmering: {
+
+            name: "Programmering",
+
+            description:
+                "Lär dig programmering från grunderna till egna projekt.",
+
+            chapters: [
+
+                {
+                    title: "HTML",
+                    description:
+                        "Lär dig skapa strukturen på webbsidor.",
+                    lessons: 5,
+                    firstLesson: "Din första HTML-sida"
+                },
+
+                {
+                    title: "CSS",
+                    description:
+                        "Lär dig designa och styla webbsidor.",
+                    lessons: 6,
+                    firstLesson: "Vad är CSS?"
+                },
+
+                {
+                    title: "JavaScript",
+                    description:
+                        "Lär dig göra webbsidor interaktiva.",
+                    lessons: 6,
+                    firstLesson: "Din första JavaScript-kod"
+                },
+
+                {
+                    title: "Variabler",
+                    description:
+                        "Förstå hur program lagrar och använder information.",
+                    lessons: 4,
+                    firstLesson: "Vad är en variabel?"
+                },
+
+                {
+                    title: "Villkor",
+                    description:
+                        "Lär dig få program att fatta olika beslut.",
+                    lessons: 5,
+                    firstLesson: "Om och annars"
+                },
+
+                {
+                    title: "Funktioner",
+                    description:
+                        "Skapa återanvändbar kod och bygg större program.",
+                    lessons: 5,
+                    firstLesson: "Vad är en funktion?"
+                }
+
+            ]
+
+        }
+
+    };
+
+
+    /* =========================================
+       SELECT SUBJECT
+       ========================================= */
+
+    const subject =
+        subjects[subjectKey] || subjects.matematik;
+
+
+    /* =========================================
+       UPDATE PAGE
+       ========================================= */
+
+    document.title =
+        `${subject.name} — Pluggly`;
+
+    document.getElementById("subject-label").textContent =
+        subject.name.toUpperCase();
+
+    document.getElementById("subject-title").textContent =
+        subject.name;
+
+    document.getElementById("subject-description").textContent =
+        subject.description;
+
+
+    /* =========================================
+       UPDATE LINKS
+       ========================================= */
+
+    document.getElementById("quiz-link").href =
+        `quiz.html?subject=${subjectKey}`;
+
+    document.getElementById("flashcards-link").href =
+        `flashcards.html?subject=${subjectKey}`;
+
+    document.getElementById("test-link").href =
+        `quiz.html?subject=${subjectKey}&mode=test`;
+
+
+    /* =========================================
+       GENERATE CHAPTERS
+       ========================================= */
+
+    const chapterList =
+        document.getElementById("chapter-list");
+
+    const chapterCount =
+        document.getElementById("chapter-count");
+
+
+    chapterCount.textContent =
+        `${subject.chapters.length} kapitel`;
+
+
+    chapterList.innerHTML = "";
+
+
+    subject.chapters.forEach((chapter, index) => {
+
+        const number =
+            String(index + 1).padStart(2, "0");
+
+
+        const card =
+            document.createElement("article");
+
+        card.className =
+            "chapter-card";
+
+
+        card.innerHTML = `
+
+            <div class="chapter-number">
+                ${number}
+            </div>
+
+
+            <div class="chapter-content">
+
+                <div class="chapter-heading">
+
+                    <div>
+
+                        <h3>
+                            ${chapter.title}
+                        </h3>
+
+                        <p>
+                            ${chapter.description}
+                        </p>
+
+                    </div>
+
+                    <span class="chapter-status">
+                        Ej startad
+                    </span>
 
                 </div>
 
 
-                <div class="overview-progress">
+                <div class="chapter-progress">
 
-                    <div class="progress-top">
-
-                        <span>
-                            Framsteg
-                        </span>
-
-                        <strong>
-                            0%
-                        </strong>
-
-                    </div>
-
-                    <div class="progress-bar">
+                    <div class="chapter-bar">
 
                         <div
-                            class="progress-fill"
+                            class="chapter-fill"
                             style="width: 0%"
                         ></div>
 
                     </div>
 
-                    <span class="progress-note">
-                        Börja din första lektion
+                    <span>
+                        0 / ${chapter.lessons} lektioner
                     </span>
 
                 </div>
 
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================================
-         QUICK ACTIONS
-         ========================================= -->
-
-    <section class="study-tools">
-
-        <div class="container">
-
-            <div class="section-header">
-
-                <div>
-
-                    <p class="eyebrow">
-                        ÖVA
-                    </p>
-
-                    <h2>
-                        Välj hur du vill plugga.
-                    </h2>
-
-                </div>
-
-            </div>
-
-
-            <div class="study-tools-grid">
 
                 <a
-                    href="quiz.html"
-                    class="study-tool"
+                    class="lesson-preview"
+                    href="lesson.html?subject=${subjectKey}&chapter=${index + 1}"
                 >
 
-                    <span class="tool-label">
-                        TESTA DIG
-                    </span>
-
-                    <h3>
-                        Quiz
-                    </h3>
-
-                    <p>
-                        Svara på frågor och se hur
-                        mycket du kan.
-                    </p>
-
-                    <span class="tool-arrow">
-                        →
-                    </span>
-
-                </a>
-
-
-                <a
-                    href="flashcards.html"
-                    class="study-tool"
-                >
-
-                    <span class="tool-label">
-                        REPETERA
-                    </span>
-
-                    <h3>
-                        Flashcards
-                    </h3>
-
-                    <p>
-                        Repetera viktiga begrepp
-                        och fakta.
-                    </p>
-
-                    <span class="tool-arrow">
-                        →
-                    </span>
-
-                </a>
-
-
-                <a
-                    href="quiz.html"
-                    class="study-tool"
-                >
-
-                    <span class="tool-label">
-                        UTMANA DIG
-                    </span>
-
-                    <h3>
-                        Test
-                    </h3>
-
-                    <p>
-                        Gör ett längre test när
-                        du känner dig redo.
-                    </p>
-
-                    <span class="tool-arrow">
-                        →
-                    </span>
-
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================================
-         CHAPTERS
-         ========================================= -->
-
-    <section class="chapters-section">
-
-        <div class="container">
-
-            <div class="section-header">
-
-                <div>
-
-                    <p class="eyebrow">
-                        KURS
-                    </p>
-
-                    <h2>
-                        Kapitel
-                    </h2>
-
-                </div>
-
-                <span class="chapter-count">
-                    6 kapitel
-                </span>
-
-            </div>
-
-
-            <div class="chapter-list">
-
-
-                <!-- CHAPTER 01 -->
-
-                <article class="chapter-card">
-
-                    <div class="chapter-number">
+                    <span>
                         01
-                    </div>
+                    </span>
 
-                    <div class="chapter-content">
+                    <span>
+                        ${chapter.firstLesson}
+                    </span>
 
-                        <div class="chapter-heading">
+                    <span class="lesson-arrow">
+                        →
+                    </span>
 
-                            <div>
-
-                                <h3>
-                                    Tal och räkning
-                                </h3>
-
-                                <p>
-                                    Lär dig grunderna i tal,
-                                    räknesätt och prioriteringsregler.
-                                </p>
-
-                            </div>
-
-                            <span class="chapter-status">
-                                Ej startad
-                            </span>
-
-                        </div>
-
-                        <div class="chapter-progress">
-
-                            <div class="chapter-bar">
-
-                                <div
-                                    class="chapter-fill"
-                                    style="width: 0%"
-                                ></div>
-
-                            </div>
-
-                            <span>
-                                0 / 4 lektioner
-                            </span>
-
-                        </div>
-
-                        <div class="lesson-preview">
-
-                            <span>01</span>
-                            <span>De fyra räknesätten</span>
-
-                            <span class="lesson-arrow">
-                                →
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <!-- CHAPTER 02 -->
-
-                <article class="chapter-card">
-
-                    <div class="chapter-number">
-                        02
-                    </div>
-
-                    <div class="chapter-content">
-
-                        <div class="chapter-heading">
-
-                            <div>
-
-                                <h3>
-                                    Bråk och procent
-                                </h3>
-
-                                <p>
-                                    Förstå bråk, decimaler,
-                                    procent och förändringar.
-                                </p>
-
-                            </div>
-
-                            <span class="chapter-status">
-                                Ej startad
-                            </span>
-
-                        </div>
-
-                        <div class="chapter-progress">
-
-                            <div class="chapter-bar">
-
-                                <div
-                                    class="chapter-fill"
-                                    style="width: 0%"
-                                ></div>
-
-                            </div>
-
-                            <span>
-                                0 / 4 lektioner
-                            </span>
-
-                        </div>
-
-                        <div class="lesson-preview">
-
-                            <span>01</span>
-                            <span>Vad är ett bråk?</span>
-
-                            <span class="lesson-arrow">
-                                →
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <!-- CHAPTER 03 -->
-
-                <article class="chapter-card">
-
-                    <div class="chapter-number">
-                        03
-                    </div>
-
-                    <div class="chapter-content">
-
-                        <div class="chapter-heading">
-
-                            <div>
-
-                                <h3>
-                                    Algebra
-                                </h3>
-
-                                <p>
-                                    Variabler, uttryck och
-                                    ekvationer.
-                                </p>
-
-                            </div>
-
-                            <span class="chapter-status">
-                                Ej startad
-                            </span>
-
-                        </div>
-
-                        <div class="chapter-progress">
-
-                            <div class="chapter-bar">
-
-                                <div
-                                    class="chapter-fill"
-                                    style="width: 0%"
-                                ></div>
-
-                            </div>
-
-                            <span>
-                                0 / 5 lektioner
-                            </span>
-
-                        </div>
-
-                        <div class="lesson-preview">
-
-                            <span>01</span>
-                            <span>Vad är en variabel?</span>
-
-                            <span class="lesson-arrow">
-                                →
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <!-- CHAPTER 04 -->
-
-                <article class="chapter-card">
-
-                    <div class="chapter-number">
-                        04
-                    </div>
-
-                    <div class="chapter-content">
-
-                        <div class="chapter-heading">
-
-                            <div>
-
-                                <h3>
-                                    Geometri
-                                </h3>
-
-                                <p>
-                                    Former, vinklar, area,
-                                    omkrets och volym.
-                                </p>
-
-                            </div>
-
-                            <span class="chapter-status">
-                                Ej startad
-                            </span>
-
-                        </div>
-
-                        <div class="chapter-progress">
-
-                            <div class="chapter-bar">
-
-                                <div
-                                    class="chapter-fill"
-                                    style="width: 0%"
-                                ></div>
-
-                            </div>
-
-                            <span>
-                                0 / 5 lektioner
-                            </span>
-
-                        </div>
-
-                        <div class="lesson-preview">
-
-                            <span>01</span>
-                            <span>Vinklar och former</span>
-
-                            <span class="lesson-arrow">
-                                →
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <!-- CHAPTER 05 -->
-
-                <article class="chapter-card">
-
-                    <div class="chapter-number">
-                        05
-                    </div>
-
-                    <div class="chapter-content">
-
-                        <div class="chapter-heading">
-
-                            <div>
-
-                                <h3>
-                                    Statistik
-                                </h3>
-
-                                <p>
-                                    Diagram, medelvärde,
-                                    median och data.
-                                </p>
-
-                            </div>
-
-                            <span class="chapter-status">
-                                Ej startad
-                            </span>
-
-                        </div>
-
-                        <div class="chapter-progress">
-
-                            <div class="chapter-bar">
-
-                                <div
-                                    class="chapter-fill"
-                                    style="width: 0%"
-                                ></div>
-
-                            </div>
-
-                            <span>
-                                0 / 4 lektioner
-                            </span>
-
-                        </div>
-
-                        <div class="lesson-preview">
-
-                            <span>01</span>
-                            <span>Att läsa diagram</span>
-
-                            <span class="lesson-arrow">
-                                →
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <!-- CHAPTER 06 -->
-
-                <article class="chapter-card">
-
-                    <div class="chapter-number">
-                        06
-                    </div>
-
-                    <div class="chapter-content">
-
-                        <div class="chapter-heading">
-
-                            <div>
-
-                                <h3>
-                                    Problemlösning
-                                </h3>
-
-                                <p>
-                                    Använd dina kunskaper för
-                                    att lösa verkliga problem.
-                                </p>
-
-                            </div>
-
-                            <span class="chapter-status">
-                                Ej startad
-                            </span>
-
-                        </div>
-
-                        <div class="chapter-progress">
-
-                            <div class="chapter-bar">
-
-                                <div
-                                    class="chapter-fill"
-                                    style="width: 0%"
-                                ></div>
-
-                            </div>
-
-                            <span>
-                                0 / 5 lektioner
-                            </span>
-
-                        </div>
-
-                        <div class="lesson-preview">
-
-                            <span>01</span>
-                            <span>Strategier för problemlösning</span>
-
-                            <span class="lesson-arrow">
-                                →
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================================
-         BOTTOM CTA
-         ========================================= -->
-
-    <section class="study-bottom">
-
-        <div class="container">
-
-            <div class="study-bottom-inner">
-
-                <div>
-
-                    <p class="eyebrow">
-                        REDO?
-                    </p>
-
-                    <h2>
-                        Börja med första lektionen.
-                    </h2>
-
-                    <p>
-                        Du behöver inte kunna något
-                        innan du börjar.
-                    </p>
-
-                </div>
-
-                <a
-                    href="#chapters"
-                    class="btn btn-primary"
-                >
-                    Börja plugga
                 </a>
 
             </div>
 
-        </div>
-
-    </section>
-
-</main>
+        `;
 
 
-<footer class="footer">
+        chapterList.appendChild(card);
 
-    <div class="container">
-
-        <p>
-            © 2026 Pluggly
-        </p>
-
-    </div>
-
-</footer>
+    });
 
 
-<script src="script.js"></script>
+    /* =========================================
+       FIRST LESSON BUTTON
+       ========================================= */
+
+    document.getElementById(
+        "start-first-lesson"
+    ).href =
+        `lesson.html?subject=${subjectKey}&chapter=1`;
+
+});
+
+</script>
 
 </body>
 </html>
-```
